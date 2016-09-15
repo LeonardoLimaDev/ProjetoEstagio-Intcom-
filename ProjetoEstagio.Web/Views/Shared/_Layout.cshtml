@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top row">
+        <div class="container">
+            <div class="navbar-header col-lg-12">
+                <div class="col-lg-5">
+                    <span class="nomeEmpresaNavBar">Projeto Estágio</span>
+                </div>
+                <div class="col-lg-6"></div>
+                <div class="col-lg-1">
+                    @Html.ActionLink("Sair", "Sair", "Account", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        
+        <footer>
+            
+        </footer>
+    </div>
+
+    <script src="~/Scripts/jquery-3.1.0.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/Lista.js"></script>
+</body>
+</html>

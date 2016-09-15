@@ -1,0 +1,18 @@
+﻿@model ProjetoEstagio.Application.ViewModels.MemoriaRAMViewModel
+
+@using (Html.BeginForm("CreateMemoriaRAM", "Computador"))
+{
+    @Html.HiddenFor(model => model.IdComputadorUltimo)
+    <h3>Incluir Novo Computador - Memória RAM</h3>
+    <div class="form-group divFormComputador row">
+        <div class="col-xs-12 col-sm-12 col-md-12 divFormComputadorCampos">
+            @Html.LabelFor(model => model.Capacidade, htmlAttributes: new { @class = "control-label" })<span>Gb(s)</span> <b class="text-danger">*</b>
+            @Html.TextBoxFor(model => model.Capacidade, new { @class = "form-control" })
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" value="CreateMemoriaRAMMais" name="action:CreateMemoriaRAMMais">Salvar e Incluir mais uma Memória RAM</button>
+        <button type="submit" class="btn btn-primary" value="CreateMemoriaRAM" name="action:CreateMemoriaRAM">Salvar</button>
+    </div>
+
+}

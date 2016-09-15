@@ -1,0 +1,25 @@
+﻿@model List<ProjetoEstagio.Application.ViewModels.MemoriaRAMViewModel>
+
+<h3>Editar Computador - Memória(s) Ram</h3>
+@foreach (var item in Model)
+{
+    @Html.HiddenFor(model => item.IdComputadorUltimo)
+    @Html.HiddenFor(model => item.ID)
+    <div class="form-group divFormComputador row">
+        <div class="col-xs-4 col-sm-4 col-md-4 divFormComputadorCampos">
+            @Html.LabelFor(model => item.Capacidade, htmlAttributes: new { @class = "control-label" }) <b class="text-danger">*</b>
+            @Html.TextBoxFor(model => item.Capacidade, new { @class = "form-control", disabled = "disabled" })
+            @Html.ValidationMessageFor(model => item.Capacidade)
+        </div>
+        <div class="col-xs-8 col-sm-8 col-md-8 divFormComputadorLinks">
+            @Html.ActionLink("Editar Memória Ram", "EditMemoriaRAM", "Computador", item, new { @class = "" })
+        </div>
+    </div>
+}
+
+<div class="modal-footer">
+    @Html.ActionLink("Incluir Nova Memória Ram", "EditMemoriaRAMMais", "Computador", Model.FirstOrDefault(), new { @class = "btn btn-primary" })
+    @Html.ActionLink("Salvar", "Lista", "Computador", null, new { @class = "btn btn-primary" })
+</div>
+
+

@@ -1,0 +1,97 @@
+﻿@model ProjetoEstagio.Application.ViewModels.ComputadorViewModel
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top row">
+        <div class="container">
+            <div class="navbar-header col-lg-12">
+                <div class="col-lg-5">
+                    <span class="nomeEmpresaNavBar">Projeto Estágio</span>
+                </div>
+                <div class="col-lg-6"></div>
+                <div class="col-lg-1">
+                    @Html.ActionLink("Sair", "Sair", "Account", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container body-content ">
+        <h2>Computador</h2>
+
+        <div class="form-group divFormComputador row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <h4>Processador</h4>
+                <hr />
+                <div class="col-xs-3 col-sm-3 col-md-3 divFormComputadorCampos">
+                    @Html.LabelFor(model => model.Processador.Modelo, htmlAttributes: new { @class = "control-label" })
+                    @Html.TextBoxFor(model => model.Processador.Modelo, new { @class = "form-control", disabled = "disabled" })
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3 divFormComputadorCampos">
+                    @Html.LabelFor(model => model.Processador.Marca, htmlAttributes: new { @class = "control-label" })
+                    @Html.TextBoxFor(model => model.Processador.Marca, new { @class = "form-control", disabled = "disabled" })
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 divFormComputadorCampos">
+                    @Html.LabelFor(model => model.Processador.Velocidade, htmlAttributes: new { @class = "control-label" })
+                    @Html.TextBoxFor(model => model.Processador.Velocidade, new { @class = "form-control", disabled = "disabled" })
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <h4>Placa Mãe</h4>
+                <hr />
+                <div class="col-xs-3 col-sm-3 col-md-3 divFormComputadorCampos">
+                    @Html.LabelFor(model => model.PlacaMae.Modelo, htmlAttributes: new { @class = "control-label" })
+                    @Html.TextBoxFor(model => model.PlacaMae.Modelo, new { @class = "form-control", disabled = "disabled" })
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3 divFormComputadorCampos">
+                    @Html.LabelFor(model => model.PlacaMae.Marca, htmlAttributes: new { @class = "control-label" })
+                    @Html.TextBoxFor(model => model.PlacaMae.Marca, new { @class = "form-control", disabled = "disabled" })
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <h4>HD(s)</h4>
+                <hr />
+                @foreach (var item in Model.Hds)
+                {
+                    <div class="col-xs-3 col-sm-3 col-md-3 divFormComputadorCampos">
+                        @Html.LabelFor(model => item.Capacidade, htmlAttributes: new { @class = "control-label" })
+                        @Html.TextBoxFor(model => item.Capacidade, new { @class = "form-control", disabled = "disabled" })
+                    </div>
+                }
+            </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <h4>Memória(s) RAM</h4>
+                <hr />
+                @foreach (var item in Model.MemoriaRAM)
+                {
+                    <div class="col-xs-3 col-sm-3 col-md-3 divFormComputadorCampos">
+                        @Html.LabelFor(model => item.Capacidade, htmlAttributes: new { @class = "control-label" })
+                        @Html.TextBoxFor(model => item.Capacidade, new { @class = "form-control", disabled = "disabled" })
+                    </div>
+                }
+            </div>
+
+        </div>
+
+
+        <div class="modal-footer">
+            @Html.ActionLink("Voltar", "Lista", "Computador", null, new { @class = "btn btn-default" })
+        </div>
+    </div>
+
+    <script src="~/Scripts/jquery-3.1.0.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/Lista.js"></script>
+</body>
+</html>

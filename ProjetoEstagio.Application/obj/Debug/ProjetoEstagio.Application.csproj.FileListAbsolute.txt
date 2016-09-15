@@ -1,0 +1,9 @@
+c:\users\leonardo\documents\visual studio 2013\Projects\ProjetoEstagio\ProjetoEstagio.Application\bin\Debug\ProjetoEstagio.Application.dll
+c:\users\leonardo\documents\visual studio 2013\Projects\ProjetoEstagio\ProjetoEstagio.Application\bin\Debug\ProjetoEstagio.Application.pdb
+c:\users\leonardo\documents\visual studio 2013\Projects\ProjetoEstagio\ProjetoEstagio.Application\obj\Debug\ProjetoEstagio.Application.dll
+c:\users\leonardo\documents\visual studio 2013\Projects\ProjetoEstagio\ProjetoEstagio.Application\obj\Debug\ProjetoEstagio.Application.pdb
+C:\Users\Leonardo\Documents\Visual Studio 2013\Projects\ProjetoEstagio\ProjetoEstagio.Application\obj\Debug\ProjetoEstagio.Application.csprojResolveAssemblyReference.cache
+C:\Users\Leonardo\Documents\Visual Studio 2013\Projects\ProjetoEstagio\ProjetoEstagio.Application\bin\Debug\AutoMapper.dll
+C:\Users\Leonardo\Documents\Visual Studio 2013\Projects\ProjetoEstagio\ProjetoEstagio.Application\bin\Debug\ProjetoEstagio.Domain.dll
+C:\Users\Leonardo\Documents\Visual Studio 2013\Projects\ProjetoEstagio\ProjetoEstagio.Application\bin\Debug\ProjetoEstagio.Domain.pdb
+C:\Users\Leonardo\Documents\Visual Studio 2013\Projects\ProjetoEstagio\ProjetoEstagio.Application\bin\Debug\AutoMapper.xml

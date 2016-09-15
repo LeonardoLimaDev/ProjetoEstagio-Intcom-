@@ -1,0 +1,19 @@
+﻿@model ProjetoEstagio.Application.ViewModels.HdViewModel
+
+@using (Html.BeginForm("CreateHd", "Computador"))
+{
+    @Html.HiddenFor(model => model.IdComputadorUltimo)
+    <h3>Incluir Novo Computador - HD</h3>
+    <div class="form-group divFormComputador row">
+        <div class="col-xs-12 col-sm-12 col-md-12 divFormComputadorCampos">
+            @Html.LabelFor(model => model.Capacidade, htmlAttributes: new { @class = "control-label" })<span>Gb(s)</span> <b class="text-danger">*</b>
+            @Html.TextBoxFor(model => model.Capacidade, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Capacidade)
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" value="CreateHdMais" name="action:CreateHdMais">Salvar e Incluir mais um HD</button>
+        <button type="submit" class="btn btn-primary" value="CreateHd" name="action:CreateHd">Salvar</button>
+    </div>
+
+}

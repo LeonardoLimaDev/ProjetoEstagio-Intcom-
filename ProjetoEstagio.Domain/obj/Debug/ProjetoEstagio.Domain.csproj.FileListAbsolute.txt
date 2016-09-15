@@ -1,0 +1,9 @@
+c:\users\leonardo\documents\visual studio 2013\Projects\ProjetoEstagio\ProjetoEstagio.Domain\bin\Debug\ProjetoEstagio.Domain.dll
+c:\users\leonardo\documents\visual studio 2013\Projects\ProjetoEstagio\ProjetoEstagio.Domain\bin\Debug\ProjetoEstagio.Domain.pdb
+c:\users\leonardo\documents\visual studio 2013\Projects\ProjetoEstagio\ProjetoEstagio.Domain\obj\Debug\ProjetoEstagio.Domain.dll
+c:\users\leonardo\documents\visual studio 2013\Projects\ProjetoEstagio\ProjetoEstagio.Domain\obj\Debug\ProjetoEstagio.Domain.pdb
+C:\Users\Leonardo\Documents\Visual Studio 2013\Projects\ProjetoEstagio\ProjetoEstagio.Domain\bin\Debug\ProjetoEstagio.Domain.dll.config
+C:\Users\Leonardo\Documents\Visual Studio 2013\Projects\ProjetoEstagio\ProjetoEstagio.Domain\bin\Debug\EntityFramework.dll
+C:\Users\Leonardo\Documents\Visual Studio 2013\Projects\ProjetoEstagio\ProjetoEstagio.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Leonardo\Documents\Visual Studio 2013\Projects\ProjetoEstagio\ProjetoEstagio.Domain\bin\Debug\EntityFramework.xml
+C:\Users\Leonardo\Documents\Visual Studio 2013\Projects\ProjetoEstagio\ProjetoEstagio.Domain\bin\Debug\EntityFramework.SqlServer.xml

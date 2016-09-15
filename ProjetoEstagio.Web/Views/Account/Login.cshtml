@@ -1,0 +1,60 @@
+﻿@model ProjetoEstagio.Application.ViewModels.UsuarioViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Login.css" rel="stylesheet" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    @Html.ValidationSummary(true)
+
+    <link href="~/Content/Views/Account/login.css" rel="stylesheet" />
+    @using (@Html.BeginForm("Login","Account"))
+    {
+        <section class="container body-content">
+            <div class="row">
+                <div class="col-sm-4 col-sm-offset-4">
+                    
+                    <h2>Entrar</h2>
+
+                    <div class="form-group">
+                        <div class="">
+                            @Html.TextBoxFor(x => x.Login, new { @class = "form-control", placeholder = "Login" })
+                        </div>
+                        <div class="col-md-12 mensagemErro">
+                            @Html.ValidationMessageFor(x => x.Login,null, new { @class = "textoErro" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="">
+                            @Html.PasswordFor(x => x.Senha, new { @class = "form-control ", placeholder = "Senha" })
+                        </div>
+                        <div class="col-md-12 mensagemErro">
+                            @Html.ValidationMessageFor(x => x.Senha)
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <input type="submit" value="Entrar" class="btn btn-block btn-primary" />
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    }
+
+    <script src="~/Scripts/jquery-3.1.0.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9291364E-3B31-4DC8-ACAD-4B1C8FB95A66}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjetoEstagio.Infra.Data</RootNamespace>
+    <AssemblyName>ProjetoEstagio.Infra.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Context\ProjetoEstagioContext.cs" />
+    <Compile Include="Infrastructure\GenericRepository.cs" />
+    <Compile Include="Migrations\201609011618130_CriacaoBanco.cs" />
+    <Compile Include="Migrations\201609011618130_CriacaoBanco.Designer.cs">
+      <DependentUpon>201609011618130_CriacaoBanco.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609022318166_teste.cs" />
+    <Compile Include="Migrations\201609022318166_teste.Designer.cs">
+      <DependentUpon>201609022318166_teste.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609022319534_testeEmpresa.cs" />
+    <Compile Include="Migrations\201609022319534_testeEmpresa.Designer.cs">
+      <DependentUpon>201609022319534_testeEmpresa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609022334388_testeUsuario.cs" />
+    <Compile Include="Migrations\201609022334388_testeUsuario.Designer.cs">
+      <DependentUpon>201609022334388_testeUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609060109167_testeComputadorHdMemoriaRAM.cs" />
+    <Compile Include="Migrations\201609060109167_testeComputadorHdMemoriaRAM.Designer.cs">
+      <DependentUpon>201609060109167_testeComputadorHdMemoriaRAM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609061145350_testecomputador.cs" />
+    <Compile Include="Migrations\201609061145350_testecomputador.Designer.cs">
+      <DependentUpon>201609061145350_testecomputador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ComputadorRepository.cs" />
+    <Compile Include="Repositories\EmpresaRepository.cs" />
+    <Compile Include="Repositories\FuncionarioRepository.cs" />
+    <Compile Include="Repositories\HdRepository.cs" />
+    <Compile Include="Repositories\MemoriaRAMRepository.cs" />
+    <Compile Include="Repositories\PlacaMaeRepository.cs" />
+    <Compile Include="Repositories\ProcessadorRepository.cs" />
+    <Compile Include="Repositories\UsuarioRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProjetoEstagio.Domain\ProjetoEstagio.Domain.csproj">
+      <Project>{3ae4ec16-ac0c-4e30-aba7-f59c79c3b5ef}</Project>
+      <Name>ProjetoEstagio.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201609011618130_CriacaoBanco.resx">
+      <DependentUpon>201609011618130_CriacaoBanco.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609022318166_teste.resx">
+      <DependentUpon>201609022318166_teste.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609022319534_testeEmpresa.resx">
+      <DependentUpon>201609022319534_testeEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609022334388_testeUsuario.resx">
+      <DependentUpon>201609022334388_testeUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609060109167_testeComputadorHdMemoriaRAM.resx">
+      <DependentUpon>201609060109167_testeComputadorHdMemoriaRAM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609061145350_testecomputador.resx">
+      <DependentUpon>201609061145350_testecomputador.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

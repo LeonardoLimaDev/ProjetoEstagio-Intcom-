@@ -1,0 +1,41 @@
+﻿@model ProjetoEstagio.Application.ViewModels.ComputadorViewModel
+
+
+@using (Html.BeginForm("Edit", "Computador"))
+{
+    @Html.HiddenFor(model => model.ID)
+    @Html.HiddenFor(model => model.PlacaMae.ID)
+    @Html.HiddenFor(model => model.Processador.ID)
+    @Html.HiddenFor(model => model.IdEmpresaEdit)
+    <h3>Editar Computador</h3>
+    <div class="form-group divFormComputador row">
+        <div class="col-xs-3 col-sm-3 col-md-3 divFormComputadorCampos">
+            @Html.LabelFor(model => model.Processador.Modelo, htmlAttributes: new { @class = "control-label" }) <b class="text-danger">*</b>
+            @Html.TextBoxFor(model => model.Processador.Modelo, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Processador.Modelo)
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3 divFormComputadorCampos">
+            @Html.LabelFor(model => model.Processador.Marca, htmlAttributes: new { @class = "control-label" }) <b class="text-danger">*</b>
+            @Html.TextBoxFor(model => model.Processador.Marca, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Processador.Marca)
+        </div>
+        <div class="col-xs-6 col-sm-6 col-md-6 divFormComputadorCampos">
+            @Html.LabelFor(model => model.Processador.Velocidade, htmlAttributes: new { @class = "control-label" }) <b class="text-danger">*</b>
+            @Html.TextBoxFor(model => model.Processador.Velocidade, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Processador.Velocidade)
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3 divFormComputadorCampos">
+            @Html.LabelFor(model => model.PlacaMae.Modelo, htmlAttributes: new { @class = "control-label" }) <b class="text-danger">*</b>
+            @Html.TextBoxFor(model => model.PlacaMae.Modelo, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.PlacaMae.Modelo)
+        </div>
+        <div class="col-xs-3 col-sm-3 col-md-3 divFormComputadorCampos">
+            @Html.LabelFor(model => model.PlacaMae.Marca, htmlAttributes: new { @class = "control-label" }) <b class="text-danger">*</b>
+            @Html.TextBoxFor(model => model.PlacaMae.Marca, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.PlacaMae.Marca)
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Salvar</button>
+    </div>
+}

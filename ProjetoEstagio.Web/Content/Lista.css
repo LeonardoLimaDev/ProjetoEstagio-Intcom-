@@ -1,0 +1,43 @@
+﻿.tdAcoes {
+    font-size:1.5em;
+}
+
+.w10 {
+    width: 10%;
+}
+
+.w15 {
+    width: 15%;
+}
+
+.w20 {
+    width: 20%;
+}
+
+.w25 {
+    width: 25%;
+}
+
+.w30 {
+    width: 30%;
+}
+
+.header-tabela{
+    
+}
+
+.botaoSair{
+    
+    float: right; 
+}
+
+.divBotaoIncluir{
+    background-color:#d9d9d9;
+    height:60px;
+    border-radius: 10px;
+}
+
+.divBotaoIncluir a{
+    float:right;
+    margin: 7px;
+}
